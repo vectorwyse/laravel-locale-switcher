@@ -41,12 +41,26 @@ Add list of supported locales and descriptions in `config/app.php`. Make sure yo
 ],
 ```
 
-In your header template, add the following:
+### Nova
+If you are using Nova, add the following to your header template:
 
 ```blade
-<dropdown class="ml-auto h-9 flex items-center dropdown-right">
-    @include('locale-switcher::dropdown')
-</dropdown>
+@include('locale-switcher::dropdown')
 ```
 
-If you would like to override the existing template and style your own dropdown, make your own and put it in `resources/views/vendor/locale-switcher/dropdown.blade.php`
+This will add a `<dropdown>` component. If you would like to style any of the elements within the template, pass in an `$attributes` array. We currently only support the elements listed below:
+
+```blade
+@include('locale-switcher::dropdown', ['attributes' => [
+    'dropdown' => ['class' => 'ml-auto h-9 flex items-center dropdown-right'],
+    'dropdown-trigger' => ['class' => 'h-9 flex items-center text-90'],
+    'dropdown-menu' => ['width' => '200', 'direction' => 'rtl'],
+    'a' => ['class' => 'block no-underline text-90 hover:bg-30 p-3'],
+]])
+```
+
+If you would like to override the existing template completely and style your own, put the code in `resources/views/vendor/locale-switcher/nova-dropdown.blade.php`
+
+### Regular HTML
+
+Coming soon!
