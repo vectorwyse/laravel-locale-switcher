@@ -8,7 +8,7 @@
             "email": "jeffrey@vectorwyse.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {},
     "extra": {
         "laravel": {
