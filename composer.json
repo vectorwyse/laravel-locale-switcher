@@ -10,6 +10,11 @@
     ],
     "minimum-stability": "stable",
     "require": {},
+    "autoload": {
+        "psr-4": {
+            "Vectorwyse\\LocaleSwitcher\\": "src/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
