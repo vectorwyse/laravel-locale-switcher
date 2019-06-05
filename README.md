@@ -26,6 +26,7 @@ Followed by:
 
 ```sh
 composer install
+php artisan migrate
 ```
 
 ## Usage
