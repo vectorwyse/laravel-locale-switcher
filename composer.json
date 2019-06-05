@@ -1,0 +1,20 @@
+{
+    "name": "vectorwyse/locale-switcher",
+    "description": "Adds locale switching to a Laravel project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeffrey Li",
+            "email": "jeffrey@vectorwyse.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vectorwyse\\LocaleSwitcher\\LocaleSwitcherServiceProvider"
+            ]
+        }
+    }
+}
