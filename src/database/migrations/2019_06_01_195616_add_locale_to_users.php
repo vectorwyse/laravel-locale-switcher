@@ -14,7 +14,7 @@ class AddLocaleToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('locale')->default('en');
+            $table->string('locale')->nullable();
         });
     }
 
