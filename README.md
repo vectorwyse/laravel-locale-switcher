@@ -7,25 +7,8 @@ Give users ability to toggle between languages. Provides template for language d
 
 ## Installation
 
-Add the following to `composer.json`:
-
-```js
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/vectorwyse/laravel-locale-switcher"
-        }
-    ],
-    "require": {
-        "vectorwyse/locale-switcher": "^1.1"
-    },
-}
-```
-Followed by:
-
 ```sh
-composer install
+composer require vectorwyse/locale-switcher
 php artisan migrate
 ```
 
@@ -45,13 +28,13 @@ Add list of supported locales and descriptions in `config/app.php`. Make sure yo
 If you are using Nova, add the following to your header template:
 
 ```blade
-@include('locale-switcher::dropdown')
+@include('locale-switcher::nova-dropdown')
 ```
 
 This will add a `<dropdown>` component. If you would like to style any of the elements within the template, pass in an `$attributes` array. We currently only support the elements listed below:
 
 ```blade
-@include('locale-switcher::dropdown', ['attributes' => [
+@include('locale-switcher::nova-dropdown', ['attributes' => [
     'dropdown' => ['class' => 'ml-auto h-9 flex items-center dropdown-right'],
     'dropdown-trigger' => ['class' => 'h-9 flex items-center text-90'],
     'dropdown-menu' => ['width' => '200', 'direction' => 'rtl'],
@@ -61,6 +44,11 @@ This will add a `<dropdown>` component. If you would like to style any of the el
 
 If you would like to override the existing template completely and style your own, put the code in `resources/views/vendor/locale-switcher/nova-dropdown.blade.php`
 
-### Regular HTML
+### Vanilla HTML
 
 Coming soon!
+
+## Support Us
+[Vectorwyse](https://vectorwyse.com) is a digital agency offering advisory and web development services. We love building things with Laravel and Vue.js, so when we have an opportunity to give back to the community, we're super excited! 
+
+If you find this package useful, or if you would like us to build something for you, feel free to [drop us a line!](mailto:hello@vectorwyse.com)
