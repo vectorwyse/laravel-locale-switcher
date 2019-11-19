@@ -5,7 +5,7 @@
         @endforeach
     @endif
 >
-    <dropdown-trigger slot-scope="{toggle}" :handle-click="toggle"
+    <dropdown-trigger
         @if (!empty($attributes['dropdown-trigger'])) 
             @foreach ($attributes['dropdown-trigger'] as $name => $value)
                 {{ $name }}="{{ $value }}"
